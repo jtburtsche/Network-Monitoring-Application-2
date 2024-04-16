@@ -1,0 +1,44 @@
+In order to run my programs I like to locate the directory where management_service.py and monitoring_service.py is in my terminal.
+
+Then I would first startup the monitoring_service.py in one terminal
+
+It will display server is "listening for incoming connections..."
+
+If it doesn't you may have to change the port number in both the monitoring_service and management_service so they match
+with a different number
+
+After getting the server running, you would open up another terminal
+
+You will then locate the directory in which the python files are stored again and begin running management_services.py
+
+This begins the program!
+
+Once you have it running you have a couple of command options that are provided to you.
+
+"0-EXIT, 1-Create Configuration, 2-Load Configurations, 3-Display Results"
+
+0 - will exit the program as it stands
+
+1- Will allow you to create a configuration to use. You get options for type, data (maybe multiple depending on the service), id
+TYPE: the types that you can choose from are just the normal commands: Type of Operations: PING, HTTP, HTTPS, NTP, DNS, TCP, UDP
+(make sure that you use capital letters)
+DATA: You have to enter each section of data. Some of them have multiples so I'll lay it out for you
+PING (data = server_address), HTTP (data = server address) , HTTPS(data = server address), NTP(data = server address),
+DNS(data= server address, data2 = query typ, data3 = record type), TCP(data = server address, data2 = port number),
+UDP(data = server address, data2 = port)
+
+ID: option of 1-5
+
+2- will load all the configurations that you have saved so far and show the json data it sends(fairly simple)
+
+
+3- Will begin the socket connection and results will begin displaying in the monitor_service.py
+You have a couple of options once you begin displaying.
+A prompt with a timeout feature will be displayed after sending each json section.
+If you enter 0...the connection will pause
+If you enter another ID (make sure that it's entered correctly in configurations) it will begin to display that id's information
+If you begin on the same operation that was paused all of the saved data will be displayed
+Too exit all you have to do is press ctrl+c!
+
+
+If you are getting a sending confirmation and a received confirmation in management_service then this ensures you still have your connection
